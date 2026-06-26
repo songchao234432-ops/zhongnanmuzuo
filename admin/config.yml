@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: songchao234432-ops/zhongnanmuzuo
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "blog"
+    label: "博客文章"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "封面图", name: "image", widget: "image", required: false}
+      - {label: "正文内容", name: "body", widget: "markdown"}

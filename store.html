@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实体展厅 · 如何购买 — 终南木作</title>
+  <meta name="description" content="终南木作实体展厅：西安原点家具批发交易中心2楼。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .kf-float { position: fixed; bottom: 120px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .kf-float a { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: #07C160; color: #fff; text-decoration: none; border-radius: 50%; font-size: 20px; font-weight: 500; box-shadow: 0 2px 12px rgba(7,193,96,0.3); font-family: "Microsoft YaHei","PingFang SC",sans-serif; }
+    .kf-float a:hover { transform: scale(1.05); }
+    .kf-float .label { font-size: 10px; color: #07C160; letter-spacing: 0.5px; white-space: nowrap; }
+    @media (max-width: 600px) { .kf-float { right: 16px; bottom: 80px; } .kf-float a { width: 44px; height: 44px; font-size: 16px; } .kf-float .label { display: none; } }
+  
+  .qr-float { position: fixed; bottom: 190px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .qr-float a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--bg); color: var(--text); text-decoration: none; border-radius: 50%; font-size: 20px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: move; }
+  .qr-float a:hover { transform: scale(1.05); }
+  .qr-float .label { font-size: 10px; color: var(--text); letter-spacing: 0.5px; white-space: nowrap; }
+  .qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
+  .qr-overlay.show { display: block; }
+  .qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.1); max-width: 320px; width: 90%; }
+  .qr-popup.show { display: block; }
+  .qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+  .qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
+  .qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
+  .qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
+  .qr-popup .close:hover { color: var(--text); }
+  @media (max-width: 600px) { .qr-float { right: 16px; bottom: 150px; } .qr-float a { width: 38px; height: 38px; font-size: 16px; } .qr-float .label { display: none; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">终南<span>木作</span></a>
+    <nav><a href="index.html">首页</a><a href="products.html">产品</a><a href="blog.html">博客</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html">服务</a><a href="faq.html">常见问题</a><a href="contact.html">联系</a></nav>
+  </div>
+</header>
+<div class="page-header"><div class="container"><h1>实体展厅 · 如何购买</h1><p>来现场看实物，或者一个电话搞定</p></div></div>
+
+<section><div class="container">
+<h2 class="section-title">西安展厅</h2>
+<div class="info-grid">
+<div class="info-card"><h3>📍 地址</h3><p>陕西省西安市西咸新区泾河新城<br>原点家具批发交易中心2楼</p><p class="label">导航搜索"原点家具批发交易中心"</p></div>
+<div class="info-card"><h3>🕘 营业时间</h3><p>周一至周日 9:30 — 18:00</p><p class="label">节假日照常营业</p></div>
+<div class="info-card"><h3>🏪 规模</h3><p>五间展厅，两千平米</p><p class="label">所有款式均有实物展示</p></div>
+<div class="info-card"><h3>💡 小建议</h3><p>来之前打个电话，我们告诉你具体在哪个展厅</p><p class="label">电话 18729585100</p></div>
+</div>
+
+<h2 class="section-title" style="margin-top:48px;">如何购买</h2>
+<div class="info-grid">
+<div class="info-card"><h3>🏪 到店选购</h3><p>来展厅看实物，摸木材、试坐感。</p></div>
+<div class="info-card"><h3>📞 电话/微信订购</h3><p>告诉我们款式尺寸木材，我们报价。</p><p class="label">18729585100（微信同号）</p></div>
+<div class="info-card"><h3>🚚 全国发货</h3><p>西安本地免费送货上楼。外地物流配送到家。</p></div>
+<div class="info-card"><h3>📏 支持定制</h3><p>尺寸、颜色、木材均可定制。</p></div>
+</div>
+
+<h2 class="section-title" style="margin-top:48px;">展厅位置</h2>
+<div style="background:var(--bg-warm);border:1px solid var(--border);overflow:hidden;">
+<img src="images/map.png" alt="终南木作·高德地图位置" style="width:100%;height:350px;object-fit:cover;display:block;">
+<div style="padding:16px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+<span style="font-size:13px;color:var(--text-light);">📍 原点家具批发交易中心2楼</span>
+<a href="https://surl.amap.com/lCpNl8Sv8W7" target="_blank" style="display:inline-block;padding:8px 20px;background:var(--wood);color:#fff;text-decoration:none;font-size:12px;letter-spacing:1px;">在高德地图中导航 →</a>
+</div></div>
+</div></section>
+
+<div class="kf-float"><a href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank" title="联系客服">微</a><span class="label">联系客服</span></div>
+<div class="qr-float">
+  <a href="javascript:void(0)" onclick="var p=document.getElementById('qr-popup'),o=document.getElementById('qr-overlay');if(p.classList.contains('show')){p.classList.remove('show');o.classList.remove('show')}else{p.classList.add('show');o.classList.add('show')}" title="微信">💬</a>
+  <span class="label">扫码加我微信</span>
+</div>
+<div id="qr-overlay" class="qr-overlay" onclick="this.classList.remove('show');document.getElementById('qr-popup').classList.remove('show')"></div>
+<div id="qr-popup" class="qr-popup">
+  <button class="close" onclick="document.getElementById('qr-popup').classList.remove('show');document.getElementById('qr-overlay').classList.remove('show')">✕</button>
+  <p class="title">扫码加微信</p>
+  <img src="images/qrcode.png" alt="微信二维码">
+  <p class="phone">18729585100</p>
+</div>
+<script>
+(function(){
+  function makeDraggable(el){
+    var pos1=0,pos2=0,pos3=0,pos4=0;
+    el.onmousedown=function(e){
+      e.preventDefault();
+      pos3=e.clientX;pos4=e.clientY;
+      document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};
+      document.onmousemove=function(e){
+        e.preventDefault();
+        pos1=pos3-e.clientX;pos2=pos4-e.clientY;
+        pos3=e.clientX;pos4=e.clientY;
+        el.style.top=(el.offsetTop-pos2)+"px";
+        el.style.left=(el.offsetLeft-pos1)+"px";
+        el.style.bottom="auto";el.style.right="auto";
+      };
+    };
+  }
+  makeDraggable(document.querySelector('.kf-float'));
+  makeDraggable(document.querySelector('.qr-float'));
+})();
+</script>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>终南木作 — 西安中古风实木家具 · 法式复古家具</title>
+  <meta name="description" content="终南木作—西安中古风实木家具品牌，专注中古风、法式、复古、侘寂风、北欧、日式风格实木家具。1990年代起家，五店展厅两千平，工厂价直供。主营茶几、柜子、餐桌、椅子等58款实木家具，西安原点家具批发交易中心2楼，电话18729585100。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .kf-float { position: fixed; bottom: 120px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .kf-float a { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: #07C160; color: #fff; text-decoration: none; border-radius: 50%; font-size: 20px; font-weight: 500; box-shadow: 0 2px 12px rgba(7,193,96,0.3); transition: transform 0.2s; font-family: "Microsoft YaHei","PingFang SC",sans-serif; }
+    .kf-float a:hover { transform: scale(1.05); }
+    .kf-float .label { font-size: 10px; color: #07C160; letter-spacing: 0.5px; white-space: nowrap; }
+    @media (max-width: 600px) { .kf-float { right: 16px; bottom: 80px; } .kf-float a { width: 44px; height: 44px; font-size: 16px; } .kf-float .label { display: none; } }
+  
+  .qr-float { position: fixed; bottom: 190px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .qr-float a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--bg); color: var(--text); text-decoration: none; border-radius: 50%; font-size: 20px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: move; }
+  .qr-float a:hover { transform: scale(1.05); }
+  .qr-float .label { font-size: 10px; color: var(--text); letter-spacing: 0.5px; white-space: nowrap; }
+  .qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
+  .qr-overlay.show { display: block; }
+  .qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.1); max-width: 320px; width: 90%; }
+  .qr-popup.show { display: block; }
+  .qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+  .qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
+  .qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
+  .qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
+  .qr-popup .close:hover { color: var(--text); }
+  @media (max-width: 600px) { .qr-float { right: 16px; bottom: 150px; } .qr-float a { width: 38px; height: 38px; font-size: 16px; } .qr-float .label { display: none; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">终南<span>木作</span></a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="products.html">产品</a>
+      <a href="store.html">展厅</a>
+      <a href="about.html">关于</a>
+      <a href="service.html">服务</a>
+      <a href="faq.html">常见问题</a>
+      <a href="contact.html">联系</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" style="background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/hero-bg.jpg') center/cover no-repeat;">
+  <div class="container">
+    <div style="background:rgba(0,0,0,0.3);padding:48px 40px;display:inline-block;backdrop-filter:blur(2px);">
+      <h1 style="color:#fff;margin-bottom:24px;">终南木作</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:14px;line-height:1.9;max-width:500px;">中古风（Mid-Century Modern），源于20世纪中期，强调简洁线条、实木质感与自然色调。不堆砌、不张扬，让木纹本身成为装饰。终南木作三十年来坚持实木不贴皮，每一件家具都带着木头的温度和时间的痕迹。</p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="about-preview">
+      <p>终南木作，西安本土实木家具品牌。九十年代起家，从一间小作坊到五店展厅、两千平米规模。</p>
+      <p>我们只做实木。每一种木材都经过严格筛选，从源头把控品质。中古风、侘寂风、法式、复古、北欧、日式——茶几、电视柜、餐桌、书桌、斗柜、床、沙发、衣帽架，全屋家具一站配齐。但有一条原则从来没变过——<strong>实木，不贴皮。</strong></p>
+      <p>2019年生产基地迁至山东德州，以更低成本保持品质。展厅在西安，欢迎来现场看实物、摸木纹。</p>
+      <a href="about.html" class="more-link">了解更多 →</a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h2 class="section-title">为什么选我们</h2>
+    <p class="section-sub">三十年的底气，写在每一件家具里</p>
+    <div class="why-grid">
+      <div class="why-item"><h3>自有工厂</h3><p>全链条自控，工厂价直供，价格透明</p></div>
+      <div class="why-item"><h3>实木不贴皮</h3><p>敢让你敲一敲、摸一摸</p></div>
+      <div class="why-item"><h3>五店展厅</h3><p>两千平米，所有款式现场看实物</p></div>
+      <div class="why-item"><h3>全国发货</h3><p>西安本地免费送货上楼</p></div>
+    </div>
+  </div>
+</section>
+<div class="kf-float"><a href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank" title="联系客服">微</a><span class="label">联系客服</span></div>
+<div class="qr-float">
+  <a href="javascript:void(0)" onclick="var p=document.getElementById('qr-popup'),o=document.getElementById('qr-overlay');if(p.classList.contains('show')){p.classList.remove('show');o.classList.remove('show')}else{p.classList.add('show');o.classList.add('show')}" title="微信">💬</a>
+  <span class="label">扫码加我微信</span>
+</div>
+<div id="qr-overlay" class="qr-overlay" onclick="this.classList.remove('show');document.getElementById('qr-popup').classList.remove('show')"></div>
+<div id="qr-popup" class="qr-popup">
+  <button class="close" onclick="document.getElementById('qr-popup').classList.remove('show');document.getElementById('qr-overlay').classList.remove('show')">✕</button>
+  <p class="title">扫码加微信</p>
+  <img src="images/qrcode.png" alt="微信二维码">
+  <p class="phone">18729585100</p>
+</div>
+<script>
+(function(){
+  function makeDraggable(el){
+    var pos1=0,pos2=0,pos3=0,pos4=0;
+    el.onmousedown=function(e){
+      e.preventDefault();
+      pos3=e.clientX;pos4=e.clientY;
+      document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};
+      document.onmousemove=function(e){
+        e.preventDefault();
+        pos1=pos3-e.clientX;pos2=pos4-e.clientY;
+        pos3=e.clientX;pos4=e.clientY;
+        el.style.top=(el.offsetTop-pos2)+"px";
+        el.style.left=(el.offsetLeft-pos1)+"px";
+        el.style.bottom="auto";el.style.right="auto";
+      };
+    };
+  }
+  makeDraggable(document.querySelector('.kf-float'));
+  makeDraggable(document.querySelector('.qr-float'));
+})();
+</script>
+  </div>
+</footer>
+</body>
+</html>

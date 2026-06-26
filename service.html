@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>服务售后 — 终南木作</title>
+  <meta name="description" content="终南木作售后服务：五年质保、送货说明、退换政策。">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .kf-float { position: fixed; bottom: 120px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .kf-float a { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: #07C160; color: #fff; text-decoration: none; border-radius: 50%; font-size: 20px; font-weight: 500; box-shadow: 0 2px 12px rgba(7,193,96,0.3); font-family: "Microsoft YaHei","PingFang SC",sans-serif; cursor: move; }
+    .kf-float a:hover { transform: scale(1.05); }
+    .kf-float .label { font-size: 10px; color: #07C160; letter-spacing: 0.5px; white-space: nowrap; }
+    @media (max-width: 600px) { .kf-float { right: 16px; bottom: 80px; } .kf-float a { width: 44px; height: 44px; font-size: 16px; } .kf-float .label { display: none; } }
+  
+  .qr-float { position: fixed; bottom: 190px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .qr-float a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--bg); color: var(--text); text-decoration: none; border-radius: 50%; font-size: 20px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: move; }
+  .qr-float a:hover { transform: scale(1.05); }
+  .qr-float .label { font-size: 10px; color: var(--text); letter-spacing: 0.5px; white-space: nowrap; }
+  .qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
+  .qr-overlay.show { display: block; }
+  .qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.1); max-width: 320px; width: 90%; }
+  .qr-popup.show { display: block; }
+  .qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+  .qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
+  .qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
+  .qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
+  .qr-popup .close:hover { color: var(--text); }
+  @media (max-width: 600px) { .qr-float { right: 16px; bottom: 150px; } .qr-float a { width: 38px; height: 38px; font-size: 16px; } .qr-float .label { display: none; } }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">终南<span>木作</span></a>
+    <nav><a href="index.html">首页</a><a href="products.html">产品</a><a href="blog.html">博客</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html" style="color:var(--text);">服务</a><a href="faq.html">常见问题</a><a href="contact.html">联系</a></nav>
+  </div>
+</header>
+<div class="page-header"><div class="container"><h1>服务售后</h1><p>买了不是结束，服务才刚刚开始</p></div></div>
+
+<section><div class="container-narrow content">
+
+<h2>家具售后</h2>
+<p>收到家具时请当场验货，确认数量，检查是否有运输破损。如发现破损，请当场拍照并与我们联系。因拍摄光线和屏幕显示差异，照片与实物可能略有不同，该情况不属于质量问题。</p>
+<p>终南木作所有家具采用环保水性漆涂装，符合国家环保标准，不含苯、重金属等有害物质。新家具可能会有少量气味，开窗通风数日即可散去，该情况不属于质量问题。</p>
+
+<h2>家居售后</h2>
+
+<h3>一、关于质保</h3>
+<p>终南木作出品的所有家具，享受<strong>五年质保</strong>。自签收之日起，非人为损坏的质量问题，免费维修或更换。</p>
+<p>实木家具受温湿度影响，出现细微木纹开裂属正常物理现象（尤其北方冬季暖气房），可以联系我们安排修补。人为损坏、使用不当、擅自拆改等情况不在质保范围内。</p>
+
+<h3>二、关于退换货</h3>
+<p><strong>质量问题退换货：</strong>签收后7天内联系客服，提供破损或质量问题照片，我们确认后安排退换。运费由我们承担。</p>
+<p><strong>非质量问题退换货：</strong>大件家具属于定制类商品，非质量问题不支持无理由退换。原因是大件家具物流成本高、往返运输容易造成二次损坏。建议购买前先来展厅看实物，或在电话里确认好尺寸、颜色、木材，避免误判。</p>
+<p>以下情况无法受理退换货：</p>
+<ul>
+  <li>任何已使用、已安装的商品</li>
+  <li>包装、说明书、配件缺失影响二次销售</li>
+  <li>任何因使用不当或保养不当导致的质量问题</li>
+  <li>定制商品（特殊尺寸、颜色、木材）无质量问题</li>
+  <li>特价商品和折扣商品</li>
+  <li>超过7天时效（质量问题除外）</li>
+</ul>
+
+<h3>三、关于运费</h3>
+<p><strong>西安本地：</strong>免费送货上楼，送到家里指定位置，当面拆包验货。</p>
+<p><strong>外地配送：</strong>通过物流专线发货。运费按距离和体积计费，下单前我们会确认清楚。因个人原因退货的，退回运费及初始发货运费由客户承担。</p>
+<p><strong>发货时间：</strong>现货产品3-7天发货，定制产品15-25天。</p>
+
+<h3>四、关于退款</h3>
+<p>退回商品经仓库验收确认后，7个工作日内将款项原路退回。订单中如有赠品未随单退回的，将扣除赠品金额后予以退款。</p>
+
+<h3>五、联系我们</h3>
+<p>售后电话/微信：<strong>18729585100</strong></p>
+<p>售后响应时间：工作日24小时内回复</p>
+<p>西安本地可上门处理，外地远程指导或协调当地师傅</p>
+
+</div></section>
+
+<script>
+(function(){function d(e){var a=0,b=0,c=0,f=0;e.onmousedown=function(g){g.preventDefault();c=g.clientX;f=g.clientY;document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};document.onmousemove=function(g){g.preventDefault();a=c-g.clientX;b=f-g.clientY;c=g.clientX;f=g.clientY;e.style.top=(e.offsetTop-b)+"px";e.style.left=(e.offsetLeft-a)+"px";e.style.bottom="auto";e.style.right="auto";}};}d(document.querySelector('.kf-float'));})();
+</script>
+
+<div class="kf-float"><a href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank" title="联系客服">微</a><span class="label">联系客服</span></div>
+<div class="qr-float">
+  <a href="javascript:void(0)" onclick="var p=document.getElementById('qr-popup'),o=document.getElementById('qr-overlay');if(p.classList.contains('show')){p.classList.remove('show');o.classList.remove('show')}else{p.classList.add('show');o.classList.add('show')}" title="微信">💬</a>
+  <span class="label">扫码加我微信</span>
+</div>
+<div id="qr-overlay" class="qr-overlay" onclick="this.classList.remove('show');document.getElementById('qr-popup').classList.remove('show')"></div>
+<div id="qr-popup" class="qr-popup">
+  <button class="close" onclick="document.getElementById('qr-popup').classList.remove('show');document.getElementById('qr-overlay').classList.remove('show')">✕</button>
+  <p class="title">扫码加微信</p>
+  <img src="images/qrcode.png" alt="微信二维码">
+  <p class="phone">18729585100</p>
+</div>
+<script>
+(function(){
+  function makeDraggable(el){
+    var pos1=0,pos2=0,pos3=0,pos4=0;
+    el.onmousedown=function(e){
+      e.preventDefault();
+      pos3=e.clientX;pos4=e.clientY;
+      document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};
+      document.onmousemove=function(e){
+        e.preventDefault();
+        pos1=pos3-e.clientX;pos2=pos4-e.clientY;
+        pos3=e.clientX;pos4=e.clientY;
+        el.style.top=(el.offsetTop-pos2)+"px";
+        el.style.left=(el.offsetLeft-pos1)+"px";
+        el.style.bottom="auto";el.style.right="auto";
+      };
+    };
+  }
+  makeDraggable(document.querySelector('.kf-float'));
+  makeDraggable(document.querySelector('.qr-float'));
+})();
+</script>
+  </div>
+</footer>
+</body>
+</html>

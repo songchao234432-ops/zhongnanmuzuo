@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>电视柜 — 终南木作</title><link rel="stylesheet" href="css/style.css">
+<style>
+.product-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border)}
+.product-item{background:var(--bg)}
+.product-item .photo{aspect-ratio:1/1;background:var(--bg-warm);overflow:hidden;border-bottom:1px solid var(--border)}
+.product-item .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.product-item .info{padding:12px}
+.product-item .info h3{font-family:var(--font-serif);font-size:13px;font-weight:400;letter-spacing:1px;color:var(--text);margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.product-item .info p{font-size:11px;color:var(--text-light);line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.product-item .info .sales{font-size:10px;color:var(--wood);letter-spacing:0.5px;margin-top:4px;display:block}
+.kf-float{position:fixed;bottom:120px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:center;gap:6px}
+.kf-float a{display:flex;align-items:center;justify-content:center;width:52px;height:52px;background:#07C160;color:#fff;text-decoration:none;border-radius:50%;font-size:20px;font-weight:500;box-shadow:0 2px 12px rgba(7,193,96,0.3);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
+.kf-float a:hover{transform:scale(1.05)}
+.kf-float .label{font-size:10px;color:#07C160;letter-spacing:.5px;white-space:nowrap}
+@media(max-width:600px){.kf-float{right:16px;bottom:80px}.kf-float a{width:44px;height:44px;font-size:16px}.kf-float .label{display:none}}
+@media(max-width:768px){.product-detail-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.product-detail-grid{grid-template-columns:1fr}}
+
+  .qr-float { position: fixed; bottom: 190px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .qr-float a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--bg); color: var(--text); text-decoration: none; border-radius: 50%; font-size: 20px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: move; }
+  .qr-float a:hover { transform: scale(1.05); }
+  .qr-float .label { font-size: 10px; color: var(--text); letter-spacing: 0.5px; white-space: nowrap; }
+  .qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
+  .qr-overlay.show { display: block; }
+  .qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.1); max-width: 320px; width: 90%; }
+  .qr-popup.show { display: block; }
+  .qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+  .qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
+  .qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
+  .qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
+  .qr-popup .close:hover { color: var(--text); }
+  @media (max-width: 600px) { .qr-float { right: 16px; bottom: 150px; } .qr-float a { width: 38px; height: 38px; font-size: 16px; } .qr-float .label { display: none; } }
+  </style></head>
+<body>
+<header><div class="container"><a href="index.html" class="logo">终南<span>木作</span></a>
+<nav><a href="index.html">首页</a><a href="products.html" style="color:var(--text)">产品</a><a href="blog.html">博客</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html">服务</a><a href="faq.html">常见问题</a><a href="contact.html">联系</a></nav></div></header>
+<div class="page-header"><div class="container"><p style="font-size:12px;color:var(--text-muted);letter-spacing:2px;margin-bottom:8px"><a href="products.html" style="color:var(--text-muted);text-decoration:none">产品</a> / 电视柜</p><h1>电视柜</h1><p>中古风实木电视柜 · 多款可选</p></div></div>
+<section style="padding-top:0"><div class="container"><div class="product-detail-grid">
+
+      <div class="product-item"><div class="photo"><img src="images/p_3750787595404181790.png" alt="客厅电视柜榫卯结构收纳柜储藏置物架法式田园轻奢中古风餐边柜"></div><div class="info"><h3>客厅电视柜榫卯结构收纳柜储藏置物架法式田园轻奢中古风餐边柜</h3><p>客厅电视柜榫卯结构收纳柜储藏置物架法式田园轻奢中古风餐边柜</p><span class="sales">🔥 已售 1</span></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3748595386223296979.png" alt="储物高级感边柜中古风中式柜子轻奢电视柜客厅电视柜家用电视柜"></div><div class="info"><h3>储物高级感边柜中古风中式柜子轻奢电视柜客厅电视柜家用电视柜</h3><p>储物高级感边柜中古风中式柜子轻奢电视柜客厅电视柜家用电视柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3750793848792678892.png" alt="中古风电视柜客厅实木大气电视柜储物柜柜子餐边柜高档法式复古"></div><div class="info"><h3>中古风电视柜客厅实木大气电视柜储物柜柜子餐边柜高档法式复古</h3><p>中古风电视柜客厅实木大气电视柜储物柜柜子餐边柜高档法式复古</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3750790047956337013.png" alt="客厅大气家用收纳柜斗柜简约储物柜书架实木书桌电视柜高档中古风"></div><div class="info"><h3>客厅大气家用收纳柜斗柜简约储物柜书架实木书桌电视柜高档中古风</h3><p>客厅大气家用收纳柜斗柜简约储物柜书架实木书桌电视柜高档中古风</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3748184314878230793.png" alt="法式电视柜收纳柜中古风新中式置物可移动实木地柜中古风电视柜"></div><div class="info"><h3>法式电视柜收纳柜中古风新中式置物可移动实木地柜中古风电视柜</h3><p>法式电视柜收纳柜中古风新中式置物可移动实木地柜中古风电视柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3748224960208961919.png" alt="电视柜柜子家用客厅字母餐边柜中古风电视柜中式实木电视柜储物柜"></div><div class="info"><h3>电视柜柜子家用客厅字母餐边柜中古风电视柜中式实木电视柜储物柜</h3><p>电视柜柜子家用客厅字母餐边柜中古风电视柜中式实木电视柜储物柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3748381505257341193.png" alt="壁挂异形电视柜客厅复古实木储物电视柜创意榫卯结构中古风电视柜"></div><div class="info"><h3>壁挂异形电视柜客厅复古实木储物电视柜创意榫卯结构中古风电视柜</h3><p>壁挂异形电视柜客厅复古实木储物电视柜创意榫卯结构中古风电视柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3748724200840495276.png" alt="中古风高档实木储物柜轻奢地柜家用电视柜置物架客厅中古风电视柜"></div><div class="info"><h3>中古风高档实木储物柜轻奢地柜家用电视柜置物架客厅中古风电视柜</h3><p>中古风高档实木储物柜轻奢地柜家用电视柜置物架客厅中古风电视柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3750789171590070501.png" alt="中古风边柜美式客厅抽屉式家用电视柜五斗柜收纳柜复古原木储物柜"></div><div class="info"><h3>中古风边柜美式客厅抽屉式家用电视柜五斗柜收纳柜复古原木储物柜</h3><p>中古风边柜美式客厅抽屉式家用电视柜五斗柜收纳柜复古原木储物柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3750790741476114914.png" alt="北欧电视柜储物柜家用收纳柜设计餐边柜柜子榫卯结构中古风电视柜"></div><div class="info"><h3>北欧电视柜储物柜家用收纳柜设计餐边柜柜子榫卯结构中古风电视柜</h3><p>北欧电视柜储物柜家用收纳柜设计餐边柜柜子榫卯结构中古风电视柜</p></div></div>
+      <div class="product-item"><div class="photo"><img src="images/p_3750793827485614474.png" alt="法式风电视柜储物柜中古风电视柜新中式地柜罗马柱电视机轻奢复古"></div><div class="info"><h3>法式风电视柜储物柜中古风电视柜新中式地柜罗马柱电视机轻奢复古</h3><p>法式风电视柜储物柜中古风电视柜新中式地柜罗马柱电视机轻奢复古</p></div></div>
+</div></div></section>
+<div class="kf-float"><a href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank" title="联系客服">微</a><span class="label">联系客服</span></div>
+<div class="qr-float">
+  <a href="javascript:void(0)" onclick="var p=document.getElementById('qr-popup'),o=document.getElementById('qr-overlay');if(p.classList.contains('show')){p.classList.remove('show');o.classList.remove('show')}else{p.classList.add('show');o.classList.add('show')}" title="微信">💬</a>
+  <span class="label">扫码加我微信</span>
+</div>
+<div id="qr-overlay" class="qr-overlay" onclick="this.classList.remove('show');document.getElementById('qr-popup').classList.remove('show')"></div>
+<div id="qr-popup" class="qr-popup">
+  <button class="close" onclick="document.getElementById('qr-popup').classList.remove('show');document.getElementById('qr-overlay').classList.remove('show')">✕</button>
+  <p class="title">扫码加微信</p>
+  <img src="images/qrcode.png" alt="微信二维码">
+  <p class="phone">18729585100</p>
+</div>
+<script>
+(function(){
+  function makeDraggable(el){
+    var pos1=0,pos2=0,pos3=0,pos4=0;
+    el.onmousedown=function(e){
+      e.preventDefault();
+      pos3=e.clientX;pos4=e.clientY;
+      document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};
+      document.onmousemove=function(e){
+        e.preventDefault();
+        pos1=pos3-e.clientX;pos2=pos4-e.clientY;
+        pos3=e.clientX;pos4=e.clientY;
+        el.style.top=(el.offsetTop-pos2)+"px";
+        el.style.left=(el.offsetLeft-pos1)+"px";
+        el.style.bottom="auto";el.style.right="auto";
+      };
+    };
+  }
+  makeDraggable(document.querySelector('.kf-float'));
+  makeDraggable(document.querySelector('.qr-float'));
+})();
+</script></div></footer></body></html>
