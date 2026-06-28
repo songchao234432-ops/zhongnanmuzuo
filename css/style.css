@@ -35,6 +35,12 @@ body {
   font-size: 15px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ======== Layout ======== */
 
 .container {
@@ -224,8 +230,13 @@ section.alt {
   transition: box-shadow 0.2s;
 }
 
+.product-card {
+  border-top: 2px solid transparent;
+}
+
 .product-card:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border-top-color: var(--wood);
 }
 
 .product-card .icon {
@@ -483,7 +494,7 @@ section.alt {
 
 footer {
   padding: 48px 0 40px;
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--wood);
   background: var(--bg-warm);
   text-align: center;
 }
@@ -632,26 +643,110 @@ footer .footer-meta {
   line-height: 1.7;
 }
 
+/* ======== Floating buttons ======== */
+
+.floating-btns {
+  position: fixed;
+  bottom: 40px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  background: var(--wood);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(154,123,79,0.28);
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--wood-dark);
+  box-shadow: 0 6px 22px rgba(154,123,79,0.4);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  border-color: var(--wood);
+  color: var(--wood);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
+.qr-overlay.show { display: block; }
+.qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.12); max-width: 320px; width: 90%; border-radius: 12px; }
+.qr-popup.show { display: block; }
+.qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
+.qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
+.qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
+.qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
+.qr-popup .close:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .floating-btns { right: 16px; bottom: 30px; gap: 8px; }
+  .btn-primary, .btn-secondary { padding: 9px 16px; font-size: 11px; }
+}
+
 /* ======== Responsive ======== */
 
+/* Tablet (≤768px) */
 @media (max-width: 768px) {
   .container, .container-narrow {
     padding: 0 20px;
   }
 
+  header {
+    padding: 16px 0;
+  }
+
   header .container {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+    letter-spacing: 3px;
   }
 
   nav {
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   nav a {
     font-size: 12px;
+    letter-spacing: 1px;
   }
 
   .hero {
@@ -663,6 +758,11 @@ footer .footer-meta {
     letter-spacing: 4px;
   }
 
+  .hero p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
   .hero-meta {
     flex-direction: column;
     gap: 8px;
@@ -672,9 +772,27 @@ footer .footer-meta {
     padding: 48px 0;
   }
 
+  .section-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .section-sub {
+    font-size: 12px;
+    margin-bottom: 36px;
+  }
+
   .product-grid {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+  }
+
+  .product-card {
+    padding: 22px 16px;
+  }
+
+  .product-card h3 {
+    font-size: 14px;
   }
 
   .why-grid {
@@ -690,7 +808,329 @@ footer .footer-meta {
     gap: 20px;
   }
 
+  .page-header {
+    padding: 48px 0 36px;
+  }
+
   .page-header h1 {
     font-size: 24px;
+  }
+
+  .content {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .content h2 {
+    font-size: 18px;
+    margin: 36px 0 12px;
+  }
+
+  .about-preview {
+    max-width: 100%;
+  }
+
+  .about-preview p {
+    font-size: 13px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .faq-item {
+    padding: 20px 0;
+  }
+
+  .faq-item h3 {
+    font-size: 15px;
+  }
+
+  .job-item {
+    padding: 24px;
+  }
+
+  .media-item {
+    padding: 24px;
+  }
+
+  footer {
+    padding: 36px 0 28px;
+  }
+
+  footer .footer-links {
+    gap: 16px;
+  }
+}
+
+/* Phone (≤480px) */
+@media (max-width: 480px) {
+  .container, .container-narrow {
+    padding: 0 16px;
+  }
+
+  header {
+    padding: 12px 0;
+    position: sticky;
+  }
+
+  header .container {
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 4px 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hero {
+    padding: 40px 0 32px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .hero-meta {
+    font-size: 12px;
+  }
+
+  section {
+    padding: 36px 0;
+  }
+
+  section.alt {
+    padding: 36px 0;
+  }
+
+  .section-title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .section-sub {
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 20px 16px;
+  }
+
+  .product-card .icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .product-card h3 {
+    font-size: 14px;
+  }
+
+  .product-card p {
+    font-size: 11px;
+  }
+
+  .why-grid {
+    gap: 12px;
+  }
+
+  .why-item {
+    padding: 20px;
+  }
+
+  .why-item h3 {
+    font-size: 14px;
+  }
+
+  .why-item p {
+    font-size: 12px;
+  }
+
+  .page-header {
+    padding: 40px 0 32px;
+  }
+
+  .page-header h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .content {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .content p {
+    margin-bottom: 16px;
+  }
+
+  .content h2 {
+    font-size: 17px;
+    margin: 32px 0 12px;
+    letter-spacing: 1px;
+  }
+
+  .content h3 {
+    font-size: 14px;
+    margin: 24px 0 8px;
+  }
+
+  .content .highlight {
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    padding: 24px 20px;
+  }
+
+  .info-card h3 {
+    font-size: 13px;
+  }
+
+  .info-card p {
+    font-size: 13px;
+  }
+
+  .info-card .phone {
+    font-size: 18px;
+  }
+
+  .store-list {
+    gap: 32px;
+  }
+
+  .store-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .store-item .info h3 {
+    font-size: 17px;
+  }
+
+  .store-item .info p {
+    font-size: 13px;
+  }
+
+  .timeline {
+    padding-left: 16px;
+  }
+
+  .timeline-item {
+    padding: 0 0 24px 20px;
+  }
+
+  .timeline-item .year {
+    font-size: 13px;
+  }
+
+  .timeline-item p {
+    font-size: 13px;
+  }
+
+  .faq-list {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item {
+    padding: 16px 0;
+  }
+
+  .faq-item h3 {
+    font-size: 14px;
+  }
+
+  .faq-item p {
+    font-size: 13px;
+  }
+
+  .job-list, .media-list {
+    gap: 1px;
+  }
+
+  .job-item {
+    padding: 20px;
+  }
+
+  .job-item h3 {
+    font-size: 14px;
+  }
+
+  .job-item p {
+    font-size: 12px;
+  }
+
+  .media-item {
+    padding: 20px;
+  }
+
+  .media-item h3 {
+    font-size: 14px;
+  }
+
+  .media-item p {
+    font-size: 12px;
+  }
+
+  .about-preview {
+    max-width: 100%;
+  }
+
+  .about-preview p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  footer {
+    padding: 28px 0 24px;
+  }
+
+  footer .footer-links {
+    gap: 12px;
+  }
+
+  footer .footer-links a {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  footer .footer-meta {
+    font-size: 10px;
   }
 }
