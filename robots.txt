@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /ByteDanceVerify.html
+
+Sitemap: https://zhongnanmuzuo.cn/sitemap.xml
