@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="baidu-site-verification" content="codeva-JwpXfuvUeo" />
 <title>产品分类 — 终南木作</title><meta name="description" content="终南木作主营：西安中古风实木家具、法式复古家具。茶几、电视柜、斗柜、餐桌、椅子等58款实木家具，工厂价直供。西安原点家具批发交易中心2楼。">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border)}
-.product-card{background:var(--bg);padding:0;text-align:center;transition:background .2s;display:block;text-decoration:none;color:inherit}
-.product-card:hover{background:var(--bg-warm)}
-.product-card .thumb{aspect-ratio:4/3;background:var(--bg-warm);display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--text-muted);border-bottom:1px solid var(--border)}
-.product-card .name{padding:16px 8px 8px;font-family:var(--font-serif);font-size:15px;color:var(--text);letter-spacing:2px}
-.product-card .count{font-size:11px;color:var(--text-muted);letter-spacing:1px;padding-bottom:16px}
-.kf-float{position:fixed;bottom:120px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:center;gap:6px}
-.kf-float a{display:flex;align-items:center;justify-content:center;width:52px;height:52px;background:#07C160;color:#fff;text-decoration:none;border-radius:50%;font-size:20px;font-weight:500;box-shadow:0 2px 12px rgba(7,193,96,0.3);font-family:"Microsoft YaHei","PingFang SC",sans-serif}
-.kf-float a:hover{transform:scale(1.05)}
-.kf-float .label{font-size:10px;color:#07C160;letter-spacing:.5px;white-space:nowrap}
-@media(max-width:600px){.kf-float{right:16px;bottom:80px}.kf-float a{width:44px;height:44px;font-size:16px}.kf-float .label{display:none}}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:768px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.product-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 
-  .qr-float { position: fixed; bottom: 190px; right: 24px; z-index: 999; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-  .qr-float a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--bg); color: var(--text); text-decoration: none; border-radius: 50%; font-size: 20px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s; cursor: move; }
-  .qr-float a:hover { transform: scale(1.05); }
-  .qr-float .label { font-size: 10px; color: var(--text); letter-spacing: 0.5px; white-space: nowrap; }
-  .qr-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; background: rgba(0,0,0,0.3); }
-  .qr-overlay.show { display: block; }
-  .qr-popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); background: var(--bg); padding: 32px; text-align: center; z-index: 1001; box-shadow: 0 8px 40px rgba(0,0,0,0.1); max-width: 320px; width: 90%; }
-  .qr-popup.show { display: block; }
-  .qr-popup img { width: 180px; height: 180px; display: block; margin: 0 auto; }
-  .qr-popup .title { font-family: var(--font-serif); font-size: 16px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; }
-  .qr-popup .phone { font-size: 13px; color: var(--text-light); margin-top: 12px; }
-  .qr-popup .close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--text-muted); cursor: pointer; background: none; border: none; padding: 4px 8px; }
-  .qr-popup .close:hover { color: var(--text); }
-  @media (max-width: 600px) { .qr-float { right: 16px; bottom: 150px; } .qr-float a { width: 38px; height: 38px; font-size: 16px; } .qr-float .label { display: none; } }
-  </style></head>
+.product-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;text-align:center;padding:38px 20px 24px;text-decoration:none;color:inherit;display:block;transition:all .3s;position:relative}
+.product-card:hover{border-color:var(--wood);box-shadow:0 8px 32px rgba(154,123,79,0.1);transform:translateY(-2px)}
+
+.product-card .icon-wrap{position:relative;width:80px;height:80px;margin:0 auto 18px}
+.product-card .ring-outer{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,#C4A97D 0%,#9A7B4F 100%);opacity:.08;transition:opacity .35s}
+.product-card:hover .ring-outer{opacity:.15}
+.product-card .ring-inner{position:absolute;inset:6px;border-radius:50%;border:1.5px solid var(--border);transition:border-color .35s}
+.product-card:hover .ring-inner{border-color:var(--wood)}
+.product-card .ring-core{position:absolute;inset:14px;border-radius:50%;background:var(--bg-warm);display:flex;align-items:center;justify-content:center;transition:background .35s,transform .35s}
+.product-card:hover .ring-core{background:var(--wood);transform:scale(1.05)}
+.product-card .ring-core span{font-family:"Noto Serif SC","Source Han Serif CN",STSong,serif;font-size:24px;color:var(--text-muted);transition:color .35s;line-height:1}
+.product-card:hover .ring-core span{color:#fff}
+
+.product-card .name{font-family:"Noto Serif SC","Source Han Serif CN",STSong,serif;font-size:15px;letter-spacing:3px;margin-bottom:6px}
+.product-card .count{font-size:11px;color:var(--text-muted);letter-spacing:1px}
+.product-card .badge{display:inline-block;font-size:10px;color:var(--wood);border:1px solid var(--wood);padding:2px 10px;border-radius:10px;margin-top:6px;letter-spacing:1px;transition:all .3s}
+.product-card:hover .badge{background:var(--wood);color:#fff}
+
+@media(max-width:600px){
+  .product-card{padding:24px 8px 16px}
+  .product-card .icon-wrap{width:60px;height:60px;margin-bottom:12px}
+  .product-card .ring-core{inset:10px}
+  .product-card .ring-core span{font-size:18px}
+  .product-card .name{font-size:13px;letter-spacing:2px}
+}
+</style></head>
 <body>
 <header><div class="container"><a href="index.html" class="logo">终南<span>木作</span></a>
-<nav><a href="index.html">首页</a><a href="products.html" style="color:var(--text)">产品</a><a href="blog.html">博客</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html">服务</a><a href="faq.html">常见问题</a><a href="contact.html">联系</a></nav></div></header>
+<nav><a href="index.html">首页</a><a href="products.html">产品</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html">服务</a><a href="blog.html">博客</a><a href="contact.html">联系</a></nav></div></header>
 <div class="page-header"><div class="container"><h1>产品</h1><p>全屋实木家具 · 工厂价直供</p></div></div>
 <section style="padding-top:0"><div class="container"><div class="product-grid">
-      <a href="chaji.html" class="product-card"><div class="thumb">🪑</div><div class="name">茶几</div><div class="count">11 款</div></a>
-      <a href="guizi.html" class="product-card"><div class="thumb">🗄️</div><div class="name">柜子</div><div class="count">26 款</div></a>
-      <a href="zhuoyi.html" class="product-card"><div class="thumb">🍽️</div><div class="name">桌/椅</div><div class="count">19 款</div></a>
-      <a href="yimaojia.html" class="product-card"><div class="thumb">🚪</div><div class="name">衣帽架</div><div class="count">2 款</div></a>
-      <a href="shafa.html" class="product-card"><div class="thumb">🛋️</div><div class="name">沙发</div><div class="count">筹备中</div></a>
-      <a href="chuang.html" class="product-card"><div class="thumb">🛏️</div><div class="name">床</div><div class="count">筹备中</div></a>
+
+      <a href="chaji.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>几</span></div></div>
+        <div class="name">茶几</div><div class="count">11 款</div></a>
+
+      <a href="guizi.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>柜</span></div></div>
+        <div class="name">柜子</div><div class="count">26 款</div></a>
+
+      <a href="zhuoyi.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>桌</span></div></div>
+        <div class="name">桌 / 椅</div><div class="count">19 款</div></a>
+
+      <a href="yimaojia.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>架</span></div></div>
+        <div class="name">衣帽架</div><div class="count">2 款</div></a>
+
+      <a href="shafa.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>沙</span></div></div>
+        <div class="name">沙发</div><div class="count"><span class="badge">筹备中</span></div></a>
+
+      <a href="chuang.html" class="product-card">
+        <div class="icon-wrap"><div class="ring-outer"></div><div class="ring-inner"></div><div class="ring-core"><span>床</span></div></div>
+        <div class="name">床</div><div class="count"><span class="badge">筹备中</span></div></a>
+
 </div></div></section>
-<div class="kf-float"><a href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank" title="联系客服">微</a><span class="label">联系客服</span></div>
-<div class="qr-float">
-  <a href="javascript:void(0)" onclick="var p=document.getElementById('qr-popup'),o=document.getElementById('qr-overlay');if(p.classList.contains('show')){p.classList.remove('show');o.classList.remove('show')}else{p.classList.add('show');o.classList.add('show')}" title="微信">💬</a>
-  <span class="label">扫码加我微信</span>
+
+
+<div class="floating-btns">
+  <a class="btn-primary" href="https://work.weixin.qq.com/kfid/kfcb73877544178d3fa" target="_blank">💬 在线客服</a>
+  <a class="btn-secondary" href="javascript:void(0)" onclick="toggleQR()">📱 扫码加微信</a>
 </div>
-<div id="qr-overlay" class="qr-overlay" onclick="this.classList.remove('show');document.getElementById('qr-popup').classList.remove('show')"></div>
-<div id="qr-popup" class="qr-popup">
-  <button class="close" onclick="document.getElementById('qr-popup').classList.remove('show');document.getElementById('qr-overlay').classList.remove('show')">✕</button>
+<div class="qr-overlay" id="qr-overlay" onclick="hideQR()"></div>
+<div class="qr-popup" id="qr-popup">
+  <button class="close" onclick="hideQR()">✕</button>
   <p class="title">扫码加微信</p>
   <img src="images/qrcode.png" alt="微信二维码">
   <p class="phone">18729585100</p>
 </div>
 <script>
-(function(){
-  function makeDraggable(el){
-    var pos1=0,pos2=0,pos3=0,pos4=0;
-    el.onmousedown=function(e){
-      e.preventDefault();
-      pos3=e.clientX;pos4=e.clientY;
-      document.onmouseup=function(){document.onmouseup=null;document.onmousemove=null;};
-      document.onmousemove=function(e){
-        e.preventDefault();
-        pos1=pos3-e.clientX;pos2=pos4-e.clientY;
-        pos3=e.clientX;pos4=e.clientY;
-        el.style.top=(el.offsetTop-pos2)+"px";
-        el.style.left=(el.offsetLeft-pos1)+"px";
-        el.style.bottom="auto";el.style.right="auto";
-      };
-    };
-  }
-  makeDraggable(document.querySelector('.kf-float'));
-  makeDraggable(document.querySelector('.qr-float'));
-})();
-</script></div></footer></body></html>
+function toggleQR(){var p=document.getElementById("qr-popup");var o=document.getElementById("qr-overlay");if(p.classList.contains("show")){o.classList.remove("show");p.classList.remove("show")}else{o.classList.add("show");p.classList.add("show")}}
+function hideQR(){document.getElementById("qr-popup").classList.remove("show");document.getElementById("qr-overlay").classList.remove("show")}
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-links"><a href="index.html">首页</a><a href="products.html">产品</a><a href="store.html">展厅</a><a href="about.html">关于</a><a href="service.html">服务</a><a href="blog.html">博客</a><a href="contact.html">联系</a><a href="faq.html">常见问题</a><a href="media.html">媒体报道</a><a href="careers.html">招聘信息</a></div>
+    <div class="footer-meta"><p>终南木作 · 西安原点家具批发交易中心2楼 · 18729585100</p><p>© 2026 终南木作</p></div>
+  </div>
+</footer>
+<script>
+function toggleQR(){var p=document.getElementById("qr-popup");var o=document.getElementById("qr-overlay");if(p.classList.contains("show")){o.classList.remove("show");p.classList.remove("show")}else{o.classList.add("show");p.classList.add("show")}}
+function hideQR(){document.getElementById("qr-popup").classList.remove("show");document.getElementById("qr-overlay").classList.remove("show")}
+</script>
+</body>
+</html>
